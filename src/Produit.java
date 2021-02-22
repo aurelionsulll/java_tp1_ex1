@@ -1,9 +1,9 @@
 public class Produit {
 
-    protected int prix_hors_taxe;
-    protected String categorie;
-    protected int nProduit;
-    protected double prix_ttc;
+    private int prix_hors_taxe;
+    private String categorie;
+    private int nProduit;
+    private double prix_ttc;
 
     public Produit() {
     }
@@ -38,7 +38,7 @@ public class Produit {
     }
 
     public double ttc() {
-        if (categorie == "alimentaire") {
+        if (categorie.equals("alimentaire")) {
             prix_ttc = prix_hors_taxe * 1.055;
         } else {
             prix_ttc = prix_hors_taxe * 1.20;
